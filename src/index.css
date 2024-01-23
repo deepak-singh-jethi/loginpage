@@ -1,13 +1,139 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Poppins:wght@100;300;400&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
+ #diagonal-line {
+     position: absolute;
+     width: 120%;
+     height: 8px;
+     background-color: cyan;
+     transform: rotate(25deg);
+     top: 20vh;
+     left: 0;
+     transform-origin: left top;
+     z-index: 1;
+ }
+ #signIn,#profile{
+    background-color: rgb(255, 255, 255);
+    width: 470px;
+    height: 580px;
+    z-index: 100;
+    box-shadow: 0px 0px 7px rgb(113, 108, 108);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 20px; */
+    padding: 30px;
+    gap: 20px;
+    border-radius: 15px;
+ }
+ form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 20px;
+ }
+
+ input{
+    width: 95%;
+    font-size: 18px;
+    padding: 6px;
+ }
+ .inputConatiner,#signInHeading{
+    line-height: 30px;
+ }
+ button{
+    background-color: #625BF7;
+    cursor: pointer;
+    width: 95%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 5px 5px gray;
+    margin-top: 30px;
+    color: #fff;
+ }
+
+ #buttonMsg{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+ }
+
+ #buttonMsg p{
+   color: red;
+   font-size: 14px;
+ }
+ #formFooter span{
+    cursor: pointer;
+    color: #625BF7;
+ }
+ a{
+    text-decoration: none;
+    color: #625BF7;
+ }
+ label{
+    font-weight: 400 ;
+    color: rgb(125, 124, 124);
+ }
+
+ #signInHeading p{
+    font-weight:400;
+    color: rgb(126, 125, 125);
+ }
+ #userDeatil{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+ }
+ #userImage{
+   width: 60%;
+   height: auto;
+   overflow: hidden;
+   padding: 5px;
+   background-color: #ffffff;
+   box-shadow: 0px 0px 4px gray;
+   border-radius: 10px;
+
+ }
+
+ #userImage img{
+    width: 100%;
+    object-fit: cover; 
+ }
+ #userInfo{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+ }
+
+
+
+
+
+

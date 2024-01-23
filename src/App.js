@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SignIn from "./Components/SignIn";
+import Profile from "./Components/Profile";
 
-function App() {
+const App = () => {
+  const [userDetail, setUserDeatil] = useState({});
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div id="diagonal-line"></div>
+      {!localStorage.getItem("user data") ? (
+        <SignIn setUserDeatil={setUserDeatil}></SignIn>
+      ) : (
+        <Profile setUserDeatil={setUserDeatil} />
+      )}
+    </>
   );
-}
+};
 
 export default App;
